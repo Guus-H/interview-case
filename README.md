@@ -4,6 +4,17 @@ Welcome! This is a **15-minute coding exercise** designed to test your ability t
 
 ---
 
+## 🚀 Getting started
+
+Open the exercise in Google Colab — no installation needed, just a Google account:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Guus-H/interview-case/blob/main/interview_exercise.ipynb)
+
+**First cell:** run the Setup cell to clone the repo and install dependencies.  
+**Second cell:** run the Secrets cell to load the API credentials your interviewer has pre-configured.
+
+---
+
 ## Context
 
 At Plat4mation we often capture requirements from meetings and translate them into user stories that are logged in ServiceNow. This exercise simulates that workflow.
@@ -19,8 +30,7 @@ You have been given a recording of an internal requirements meeting about buildi
 | `transcripts/` | The meeting transcript in two formats: `.vtt` (Teams export) and `.docx` (Word) — pick one |
 | `user_story_definition.md` | The format and fields expected for a valid user story |
 | `snippets/` | A folder of potentially useful code snippets — feel free to use them |
-| `requirements.txt` | Python dependencies pre-installed in this environment |
-| `.env.example` | Template showing which environment variables are available |
+| `output/` | Put your output here |
 
 ---
 
@@ -46,7 +56,7 @@ If you complete Part 1 with time to spare, extend your script to push the user s
 
 - Target table: `rm_story`
 - Field mapping is described in `user_story_definition.md`
-- Credentials and endpoint are available as environment variables (see `.env.example`)
+- Credentials and endpoint are available as Colab Secrets (loaded in the second cell)
 - There is a code snippet in `snippets/` that shows how to interact with the ServiceNow Table API
 
 ---
@@ -56,8 +66,7 @@ If you complete Part 1 with time to spare, extend your script to push the user s
 - You do not need to handle every edge case — focus on getting a working solution
 - Reusability matters: think about how this tool could be used for future meetings, not just this one
 - The `snippets/` folder is there to help — you are free to use, adapt, or ignore them
-- Output goes in the `output/` folder (it is already created for you)
-- To run your script, open the **Shell** via the **+** icon in the bottom tab bar, then run `python your_script.py`
+- Put your output in the `output/` folder
 
 ---
 
