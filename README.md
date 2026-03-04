@@ -11,7 +11,7 @@ Open the exercise in Google Colab — no installation needed, just a Google acco
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Guus-H/interview-case/blob/main/interview_exercise.ipynb)
 
 **First cell:** run the Setup cell to clone the repo and install dependencies.  
-**Second cell:** run the Secrets cell to load the API credentials your interviewer has pre-configured.
+**Second cell:** fill in the credentials your interviewer has provided, then run the cell.
 
 ---
 
@@ -56,7 +56,7 @@ If you complete Part 1 with time to spare, extend your script to push the user s
 
 - Target table: `rm_story`
 - Field mapping is described in `user_story_definition.md`
-- Credentials and endpoint are available as Colab Secrets (loaded in the second cell)
+- Credentials and endpoint are available as variables in the second cell
 - There is a code snippet in `snippets/` that shows how to interact with the ServiceNow Table API
 
 ---
