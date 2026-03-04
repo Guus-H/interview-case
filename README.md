@@ -1,6 +1,6 @@
 # Interview Coding Exercise — Meeting Transcript to User Stories
 
-Welcome! This is a **15-minute coding exercise** designed to test your ability to turn unstructured input into structured, actionable output using Python.
+Welcome! This is a **brief coding exercise** designed to test your ability to turn unstructured input into structured, actionable output using Python.
 
 ---
 
