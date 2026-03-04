@@ -1,0 +1,27 @@
+{
+  "name": "Interview Exercise",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
+  // Install Python dependencies automatically on container start
+  "postCreateCommand": "pip install -r requirements.txt && mkdir -p output",
+
+  // Pre-install the Python extension so the editor is ready immediately
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylance"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "files.exclude": {
+          "SOLUTION/**": true,
+          ".devcontainer/**": true,
+          "setup/**": true,
+          "**/__pycache__": true
+        }
+      }
+    }
+  }
+}

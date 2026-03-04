@@ -6,12 +6,31 @@ Welcome! This is a **15-minute coding exercise** designed to test your ability t
 
 ## 🚀 Getting started
 
-Open the exercise in Google Colab — no installation needed, just a Google account:
+### Option A — GitHub Codespaces *(recommended)*
+
+Opens a full VS Code environment in your browser — no installation required, just a GitHub account.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Guus-H/interview-case)
+
+Once the Codespace has loaded (~30 seconds):
+
+1. Open the terminal (`Ctrl+`` ` or **Terminal → New Terminal**)
+2. Copy `.env.example` to `.env` and fill in the credentials your interviewer provided:
+   ```bash
+   cp .env.example .env
+   ```
+3. Open `.env`, replace the placeholder values, and save
+4. You're ready — create a new `.py` file and start coding
+
+---
+
+### Option B — Google Colab *(alternative)*
+
+If you prefer a notebook-style environment:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Guus-H/interview-case/blob/main/interview_exercise.ipynb)
 
-**First cell:** run the Setup cell to clone the repo and install dependencies.  
-**Second cell:** fill in the credentials your interviewer has provided, then run the cell.
+Run the **Setup** cell first, then fill in your credentials in the **Credentials** cell before starting.
 
 ---
 
@@ -56,7 +75,7 @@ If you complete Part 1 with time to spare, extend your script to push the user s
 
 - Target table: `rm_story`
 - Field mapping is described in `user_story_definition.md`
-- Credentials and endpoint are available as variables in the second cell
+- Credentials are available in your `.env` file (Codespaces) or the Credentials cell (Colab)
 - There is a code snippet in `snippets/` that shows how to interact with the ServiceNow Table API
 
 ---
