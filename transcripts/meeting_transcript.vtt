@@ -1,0 +1,273 @@
+WEBVTT
+
+1
+00:00:03.000 --> 00:00:07.500
+<v Sarah Chen>Okay I think we're all in — yes, Priya just joined. Welcome everyone.</v>
+
+2
+00:00:07.500 --> 00:00:10.200
+<v Priya Sharma>Sorry, Teams was being difficult again.</v>
+
+3
+00:00:10.200 --> 00:00:13.800
+<v Tom Bakker>No worries. Can everyone hear me okay?</v>
+
+4
+00:00:13.800 --> 00:00:15.100
+<v Mark de Vries>Loud and clear, Tom.</v>
+
+5
+00:00:15.100 --> 00:00:32.000
+<v Sarah Chen>Great. So this is our second requirements session for the Meridian employee portal project. Last time we covered the high-level scope — today I want to get into the specifics of what we're actually building. Tom, you said you had some things you wanted to kick off with?</v>
+
+6
+00:00:32.000 --> 00:00:59.500
+<v Tom Bakker>Yeah thanks Sarah. So my main concern — and I've been hearing this from employees since we announced the project — is that whatever people see when they first log in actually makes sense. Right now they're jumping between three different intranet pages and two separate ticketing systems. So I want the landing page to be the one place where everything starts. You land there and you immediately see what's relevant to you.</v>
+
+7
+00:00:59.500 --> 00:01:05.200
+<v Lisa Janssen>That makes sense. Are you thinking more of a dashboard feel, or a classic intranet homepage?</v>
+
+8
+00:01:05.200 --> 00:01:31.000
+<v Tom Bakker>Dashboard, definitely. I want people to land there and see — okay so there are a few things. Company news and announcements, because right now HR sends an email and half the people miss it. And then also some kind of quick overview of their open requests and pending tasks. So they're not having to go hunting for things.</v>
+
+9
+00:01:31.000 --> 00:01:44.500
+<v Priya Sharma>I love that direction. From a communications standpoint, having announcements front and center is huge for us. We've been asking for a proper internal comms channel for two years. And can I just add — it should be visual. Not just a bullet list of text.</v>
+
+10
+00:01:44.500 --> 00:01:49.000
+<v Tom Bakker>Exactly, yes. Cards with a featured banner at the top would be ideal.</v>
+
+11
+00:01:49.000 --> 00:02:06.500
+<v Mark de Vries>That's very doable in the Service Portal. We can set up a homepage widget that pulls news items from a dedicated announcements table. I'd go with a dedicated table rather than the knowledge base — gives you more control over scheduling and audience targeting.</v>
+
+12
+00:02:06.500 --> 00:02:12.000
+<v Sarah Chen>Good. So homepage: dashboard layout, announcements widget, summary of open requests. Let's keep that captured. Mark, you have that?</v>
+
+13
+00:02:12.000 --> 00:02:13.500
+<v Mark de Vries>Already noted.</v>
+
+14
+00:02:13.500 --> 00:02:42.000
+<v Lisa Janssen>Before we go further on the homepage — I want to make sure we also get the service catalog on the table today, because I think that's where we have the most complexity. Tom, you mentioned two ticketing systems. One for IT and one for HR I assume? And the idea is to consolidate that into a single request experience?</v>
+
+15
+00:02:42.000 --> 00:03:05.500
+<v Tom Bakker>Correct. Right now if you need a new laptop you go to one system. If you need to update your personal details or request leave, that's a different HR portal. Employees find it confusing. We want one front door. You come in, you see categories — IT, HR, Facilities — pick what you need and fill in a form.</v>
+
+16
+00:03:05.500 --> 00:03:24.000
+<v Lisa Janssen>And the forms — how complex are we talking? Are there fields that change depending on the category? Mandatory attachments, that kind of thing?</v>
+
+17
+00:03:24.000 --> 00:03:48.500
+<v Tom Bakker>For some of them yes. If you're requesting new hardware you'd specify the type, and for anything above a certain value you'd need a manager approval before it moves forward. But I don't want to overcomplicate the UI. The form should feel simple even if there's logic behind it.</v>
+
+18
+00:03:48.500 --> 00:04:04.000
+<v Mark de Vries>That's standard catalog item behavior — dynamic fields, mandatory conditions, approval flows triggered by thresholds. We've done that before. The main decision is really about how you structure the categories and which fields are global versus per-item.</v>
+
+19
+00:04:04.000 --> 00:04:12.500
+<v Priya Sharma>Can I jump in on the design side for a second? I want to make sure the request form feels on-brand. We have a style guide, and our primary action color is a specific teal — not the default ServiceNow blue.</v>
+
+20
+00:04:12.500 --> 00:04:17.000
+<v Mark de Vries>Sure, we can theme the portal. That's CSS configuration, not a big lift.</v>
+
+21
+00:04:17.000 --> 00:04:19.500
+<v Priya Sharma>Good. And — this might sound like a small thing — where does the submit button go on the form?</v>
+
+22
+00:04:19.500 --> 00:04:24.000
+<v Tom Bakker>At the bottom, right? Like every other form on the internet.</v>
+
+23
+00:04:24.000 --> 00:04:37.500
+<v Priya Sharma>Well, our brand guidelines actually say primary action buttons should be top-right. It's about reducing eye travel. The button is always in the same place, so users know where to look regardless of how long the form is.</v>
+
+24
+00:04:37.500 --> 00:04:47.500
+<v Tom Bakker>That feels really unintuitive to me. You haven't even filled in the form yet and the submit button is already visible? What if you scroll? Are there two buttons?</v>
+
+25
+00:04:47.500 --> 00:05:01.000
+<v Priya Sharma>It would be sticky — it stays fixed in the top-right as you scroll. It's actually a pretty modern pattern. A lot of SaaS products work this way now.</v>
+
+26
+00:05:01.000 --> 00:05:15.500
+<v Mark de Vries>I've seen both. Sticky top-right can work for short forms, but for longer forms it feels disconnected from the content. What about a sticky footer bar instead? Always visible, but anchored at the bottom where users expect an action.</v>
+
+27
+00:05:15.500 --> 00:05:22.000
+<v Priya Sharma>Hmm. I could live with that as long as it uses the brand color and spans the full width of the form area.</v>
+
+28
+00:05:22.000 --> 00:05:27.000
+<v Tom Bakker>That works for me. Sarah, should we capture that?</v>
+
+29
+00:05:27.000 --> 00:05:40.000
+<v Sarah Chen>Let's note it as a UI preference for the design phase — sticky submit button, full-width footer style, primary brand color. Not a functional requirement as such. Can we get back to the catalog functionality?</v>
+
+30
+00:05:40.000 --> 00:05:54.500
+<v Lisa Janssen>Yes — one thing I want to confirm Tom: do employees need to be able to attach files when submitting a request? I'm thinking of the hardware scenario — you might want to attach a quote or an existing approval email.</v>
+
+31
+00:05:54.500 --> 00:06:03.500
+<v Tom Bakker>Definitely. File attachments are a must. And there should be a free-text notes field too — so people can give context even when there isn't a specific form field for their situation.</v>
+
+32
+00:06:03.500 --> 00:06:20.000
+<v Lisa Janssen>Perfect. So for the request catalog: category browsing, dynamic form fields per request type, mandatory fields, file attachment support, free-text notes. I think that covers the core of that one.</v>
+
+33
+00:06:20.000 --> 00:06:21.500
+<v Sarah Chen>Great, that's well scoped.</v>
+
+34
+00:06:21.500 --> 00:06:52.000
+<v Mark de Vries>While we're on the topic — I want to raise something related but slightly different. One of the patterns we see a lot is that employees submit tickets for things that are already answered in existing documentation. We get five tickets a week just about VPN connectivity. If we have a searchable knowledge base that's surfaced prominently — and ideally integrated with the request form — you can deflect a real chunk of that volume. Tom, does Meridian have existing knowledge content or would this be starting from scratch?</v>
+
+35
+00:06:52.000 --> 00:07:10.000
+<v Tom Bakker>We have some stuff in Confluence — pretty outdated. And there's a SharePoint site that nobody uses because nothing is findable. So yeah, effectively greenfield. But I love the idea. If employees can find answers themselves before submitting a ticket, that's a big win for the IT team.</v>
+
+36
+00:07:10.000 --> 00:07:27.500
+<v Mark de Vries>ServiceNow has knowledge management built in. You get categories, a search interface, and you can even surface suggested articles when someone starts filling in a request — like, you're asking about VPN access, and the form shows three articles that might answer it first.</v>
+
+37
+00:07:27.500 --> 00:07:40.000
+<v Priya Sharma>Oh that's really smart. And from a comms angle, we could use knowledge articles for onboarding materials, company policies — it doesn't have to be just IT content.</v>
+
+38
+00:07:40.000 --> 00:07:56.000
+<v Tom Bakker>Good point. HR has been wanting a place to publish policy documents that people can actually find. As long as we can have different sections with different owners — IT manages IT content, HR manages HR content — I'm very much in favour.</v>
+
+39
+00:07:56.000 --> 00:08:12.000
+<v Mark de Vries>Exactly. Each knowledge category can have its own owner group with publish rights. And employees can rate whether an article was helpful — which is useful for keeping the content quality up over time.</v>
+
+40
+00:08:12.000 --> 00:08:22.000
+<v Sarah Chen>Good. So knowledge base — searchable, categorized, category-level ownership, helpfulness rating, and integrated article suggestions during request submission. Another requirement.</v>
+
+41
+00:08:22.000 --> 00:08:29.500
+<v Lisa Janssen>Should the article suggestions during submission be explicitly in scope, or is that a nice-to-have?</v>
+
+42
+00:08:29.500 --> 00:08:40.000
+<v Tom Bakker>In scope. If it deflects even twenty percent of unnecessary tickets it pays for itself. I want that.</v>
+
+43
+00:08:40.000 --> 00:08:43.000
+<v Sarah Chen>Noted, in scope.</v>
+
+44
+00:08:43.000 --> 00:08:50.500
+<v Priya Sharma>Quick thing on the homepage — I didn't hear us mention quick links. Like shortcuts to the most commonly used things.</v>
+
+45
+00:08:50.500 --> 00:09:07.000
+<v Tom Bakker>Yes, good catch. Our office manager was very specific about this. She wants a kind of top-ten list — the things 80% of employees need 80% of the time. New request, check my open tickets, find a policy, maybe book a meeting room.</v>
+
+46
+00:09:07.000 --> 00:09:18.500
+<v Lisa Janssen>Should those quick links be configurable per role? An IT admin might want different shortcuts than a regular employee.</v>
+
+47
+00:09:18.500 --> 00:09:33.000
+<v Tom Bakker>Ideally yes, but keep it simple. A default set that works for everyone, and then a separate set for IT admins. Two tiers is enough for now — I don't want to turn this into a configuration nightmare.</v>
+
+48
+00:09:33.000 --> 00:09:40.000
+<v Sarah Chen>Okay so homepage gets updated — add a quick links widget, two role tiers. Got it.</v>
+
+49
+00:09:40.000 --> 00:10:18.500
+<v Mark de Vries>There's one more thing I think we need to cover and that's the approvals flow. We said some requests trigger a manager approval. Where does the manager actually go to handle that? Right now they get an email and reply to it, which is a nightmare from an audit perspective. I think we need a dedicated view in the portal where managers can see all their pending approvals in one place — the full details of each request — and action them with an approve or reject and a comment. That should probably also show up as a widget on the homepage, but with a link through to a full-page view.</v>
+
+50
+00:10:18.500 --> 00:10:31.000
+<v Tom Bakker>That is crucial. Honestly that feature alone will get manager buy-in for the whole portal. Right now approval emails just get lost. I had a request sitting open for three weeks because someone's inbox was full.</v>
+
+51
+00:10:31.000 --> 00:10:42.500
+<v Lisa Janssen>So we're talking about a My Approvals view — filterable list, actionable inline, with approve and reject with a comment field?</v>
+
+52
+00:10:42.500 --> 00:10:52.000
+<v Mark de Vries>And enough context per item — who submitted it, what they're asking for, when it came in. Not just a list of ticket numbers.</v>
+
+53
+00:10:52.000 --> 00:11:00.500
+<v Tom Bakker>Yes. And overdue items should stand out visually. If something has been waiting more than three working days, I want it flagged somehow.</v>
+
+54
+00:11:00.500 --> 00:11:16.500
+<v Lisa Janssen>So: My Approvals page with a filterable list of pending approvals including request details, inline approve and reject actions with a mandatory comment, and visual highlighting for items overdue by more than three working days. That's clean.</v>
+
+55
+00:11:16.500 --> 00:11:21.000
+<v Sarah Chen>Perfect. I think that's our four core areas. Let me read them back quickly.</v>
+
+56
+00:11:21.000 --> 00:11:55.000
+<v Sarah Chen>One — personalized homepage: announcements widget, open requests summary, role-based quick links. Two — service request catalog: category browsing, dynamic forms, file attachments, notes field. Three — knowledge base: searchable, categorized, ownership per category, helpfulness rating, suggested articles during request submission. Four — My Approvals dashboard for managers: pending approvals list with details, approve and reject with comment, overdue highlighting. Does that cover what we discussed?</v>
+
+57
+00:11:55.000 --> 00:12:01.000
+<v Tom Bakker>Yes, that's it. Good summary. Feels like a solid v1 scope.</v>
+
+58
+00:12:01.000 --> 00:12:12.500
+<v Priya Sharma>Agreed from my side. Just making sure everyone remembers — the brand guidelines apply across all of it. Colors, fonts, button styles. I'll send the style guide to Mark this week.</v>
+
+59
+00:12:12.500 --> 00:12:14.000
+<v Mark de Vries>Thanks, looking forward to it.</v>
+
+60
+00:12:14.000 --> 00:12:27.500
+<v Lisa Janssen>Sarah, should we do a quick review session before the stories go into ServiceNow? I want to make sure the acceptance criteria are solid before the team starts picking things up.</v>
+
+61
+00:12:27.500 --> 00:12:37.000
+<v Sarah Chen>Good idea. I'll send an invite for next week. Tom, Priya — can you join for that review?</v>
+
+62
+00:12:37.000 --> 00:12:39.500
+<v Tom Bakker>Should be fine, yes.</v>
+
+63
+00:12:39.500 --> 00:12:42.000
+<v Priya Sharma>I'll check my calendar but I'll make it work.</v>
+
+64
+00:12:42.000 --> 00:12:52.000
+<v Sarah Chen>Great. I'll get these captured as user stories by end of week. Thanks everyone — good session.</v>
+
+65
+00:12:52.000 --> 00:12:54.500
+<v Mark de Vries>Thanks all, bye!</v>
+
+66
+00:12:54.500 --> 00:12:56.000
+<v Tom Bakker>Bye everyone.</v>
+
+67
+00:12:56.000 --> 00:12:57.500
+<v Priya Sharma>Bye, thanks!</v>
+
+68
+00:12:57.500 --> 00:12:59.000
+<v Lisa Janssen>Bye!</v>
