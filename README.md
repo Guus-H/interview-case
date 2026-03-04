@@ -57,3 +57,10 @@ If you complete Part 1 with time to spare, extend your script to push the user s
 - Reusability matters: think about how this tool could be used for future meetings, not just this one
 - The `snippets/` folder is there to help — you are free to use, adapt, or ignore them
 - Output goes in the `output/` folder (it is already created for you)
+- To run your script, open the **Shell** via the **+** icon in the bottom tab bar, then run `python your_script.py`
+
+---
+
+## Note on the SOLUTION folder
+
+A reference solution is included in the `SOLUTION/` folder. Please do not look at it during the exercise — it is there for the interviewer. Give it your own shot first!
