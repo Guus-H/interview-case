@@ -36,7 +36,7 @@ Run the **Setup** cell first, then fill in your credentials in the **Credentials
 
 ## Context
 
-At Plat4mation we often capture requirements from meetings and translate them into user stories that are logged in ServiceNow. This exercise simulates that workflow.
+At our company we often capture requirements from meetings and translate them into user stories that are logged in ServiceNow. This exercise simulates that workflow.
 
 You have been given a recording of an internal requirements meeting about building an **employee self-service portal**. The meeting was real-world messy — people interrupted each other, went off-topic, and circled back. Your job is to build a tool that makes sense of it.
 
